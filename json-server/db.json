@@ -1,16 +1,57 @@
 {
-    "friends": [
-      {
-        "id": 0,
-        "name": "Casey Horne"
-      },
+    "users": [
       {
         "id": 1,
-        "name": "Watson Hull"
+        "user": "RicardoPu",
+        "email": "ricardopu1993@gmail.com",
+        "name": "Ricardo Puentes Castro",
+        "password": "RicardoPu/*/*1504",
+        "typeUser": 1
+
       },
       {
         "id": 2,
-        "name": "Arlene Mullen"
+        "user": "LiliamCu",
+        "email": "liliam_240@hotmail.com",
+        "name": "Liliam Cuesta",
+        "password": "LiliamCu/*/*1504",
+        "typeUser": 2
+      },
+      {
+        "id": 3,
+        "user": "GabrielPu",
+        "email": "gabrielpuentes@outlook.com",
+        "name": "Gabriel Puentes",
+        "password": "GabrielPu/*/*1504",
+        "typeUser": 3
+      }
+    ],
+    "information": [
+      {
+        "id": 1,
+        "info": "Este es un perfil creado a la medida para un desarrollador de aplicaciones WEB especializado en Front-End de la empresa Mobiera"
+      },
+      {
+        "id": 2,
+        "info": "Este es un perfil creado a la medida para una auxiliar en recursos humanos de la empresa Mobiera"
+      },
+      {
+        "id": 3,
+        "info": "Este es un perfil creado a la medida para un mensajero de la empresa Mobiera"
+      }
+    ],
+    "typeUsers": [
+      {
+        "id":1,
+        "type": "developer"
+      },
+      {
+        "id":2,
+        "type": "rrhh"
+      },
+      {
+        "id":3,
+        "type": "mensajero"
       }
     ]
 }
