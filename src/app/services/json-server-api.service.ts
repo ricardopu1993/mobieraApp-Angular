@@ -22,4 +22,10 @@ export class JsonServerAPIService {
     ); 
   }
 
+  public getInfoUser(id: number){
+    return this.http.get<Information>(
+      this.url+"information/"+id
+    ); 
+  }
+
 }

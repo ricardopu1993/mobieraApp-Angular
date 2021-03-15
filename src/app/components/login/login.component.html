@@ -13,14 +13,6 @@
                     <input placeholder="Password" class="form-control" type="password" ngModel name="password"  required>
                 </div>
                 <button class="btn btn-success">Login</button>
-
-                <div *ngIf="user | async as p">
-                    <h2>{{ p.user }}</h2>
-                    <h2>{{ p.email }}</h2>
-                    <h2>{{ p.name }}</h2>
-                    <h2>{{ p.password }} </h2>
-                    <h2>{{ p.typeUser }}</h2>
-                </div>
             </form>
         </div>
     </div>
