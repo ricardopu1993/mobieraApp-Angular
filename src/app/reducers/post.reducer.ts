@@ -42,9 +42,10 @@ export function postReducer(state: Users = defaultState, action: Action){
         case PostActions.EDIT_ACTUALLYUSER:
             console.log(action.user);
             return newState(state, { 
-                user: action.user, 
+                id: action.id,
+                user: action.user,
+                email: action.email, 
                 name: action.name,
-                email: action.email,
                 password: action.password,
                 typeUser: action.typeUser
              })

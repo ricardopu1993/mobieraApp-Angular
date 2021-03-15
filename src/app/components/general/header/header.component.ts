@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Users } from 'src/app/models/users';
 
 @Component({
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   storageUser: Users;
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -19,5 +20,8 @@ export class HeaderComponent implements OnInit {
   logOut(){
       localStorage.removeItem('user');
       this.router.navigateByUrl("/login");
+
+      this.toastr.clear();
+      this.toastr.success("Vuelva Pronto", "Hasta Luego");
   }
 }

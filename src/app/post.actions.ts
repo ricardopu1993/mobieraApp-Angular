@@ -41,7 +41,7 @@ export class EditTypeUser implements Action {
 export class EditActuallyUser implements Action {
     readonly type = EDIT_ACTUALLYUSER;
 
-    constructor(public user: string, public password: string, public email: string, public name: string, public typeUser: number) {}
+    constructor(public id: number, public user: string, public email: string, public name: string, public password: string,  public typeUser: number) {}
 }
 
 

@@ -28,4 +28,16 @@ export class JsonServerAPIService {
     ); 
   }
 
+  public editUserInfo(newUser: Users){
+    return this.http.patch<Users>(
+      this.url+"users/"+newUser.id,
+      newUser,
+      {
+        headers: new HttpHeaders({
+          'Content-Type':'application/json'
+        }) 
+      }
+    )
+  }
+
 }

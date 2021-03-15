@@ -49,6 +49,7 @@ export class LoginComponent implements OnInit {
             this.authUser = true;
             localStorage.setItem('user', serializedData);
             this.store.dispatch(new PostActions.EditActuallyUser(
+              element.id,
               element.user, 
               element.name,
               element.email,

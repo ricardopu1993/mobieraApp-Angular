@@ -7,6 +7,7 @@ import { AppState } from 'src/app/models/appstate';
 import { Users } from 'src/app/models/users';
 import { JsonServerAPIService } from 'src/app/services/json-server-api.service';
 import { NgForm } from '@angular/forms';
+import * as PostActions from './../../post.actions';
 
 @Component({
   selector: 'app-edit-user',
@@ -27,12 +28,39 @@ export class EditUserComponent implements OnInit {
     this.storageUser = localStorage.getItem('user') != null ? JSON.parse(localStorage.getItem('user')) : null;
   }
 
-  cancel(){
-
-  }
-
   editUser(form: NgForm){
+    console.log(form);
 
+    var newUser:Users = {
+      id: this.storageUser.id,
+      user: form.value.user,
+      email: form.value.email,
+      name: form.value.name,
+      password: form.value.password,
+      typeUser: form.value.typeUser
+    }
+    this.jsonServer.editUserInfo(newUser)  
+    .subscribe(data => {
+      if(data != null){
+        this.store.dispatch(new PostActions.EditActuallyUser(
+          data.id,
+          data.user,
+          data.email,
+          data.name,
+          data.password,
+          data.typeUser)
+        )
+        let serializedData = JSON.stringify(data);
+        localStorage.setItem('user', serializedData);
+
+        this.toastr.clear();
+        this.toastr.success("Datos actualizados correctamente", "Felicidades");
+      }else{
+        this.toastr.clear();
+        this.toastr.error("Error al editar usuario", "Error");
+      }
+
+    })
   }
 
 }
