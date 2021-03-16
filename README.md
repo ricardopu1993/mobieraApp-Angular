@@ -15,6 +15,6 @@ Navigate in another cmd to `json-server/` and run `json-server --watch db.json`
 
 For testing this app can use the next users and passwords:
 
-RicardoPuentes / RicardoPu/*/*051
-LiliamCu / LiliamCu/*/*1504
-GabrielPu / GabrielPu/*/*1504
+RicardoPuentes - RicardoPu/*/*051
+LiliamCu - LiliamCu/*/*1504
+GabrielPu - GabrielPu/*/*1504
