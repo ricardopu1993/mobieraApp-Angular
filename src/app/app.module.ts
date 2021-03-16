@@ -8,12 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
-import { simpleReducer } from './reducers/simple.reducer';
 import { postReducer } from './reducers/post.reducer';
 
 import { HeaderComponent } from './components/general/header/header.component';
 import { LoginComponent } from './components/login/login.component';
-import { LateralMenuComponent } from './components/general/lateral-menu/lateral-menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 
@@ -23,7 +21,6 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    LateralMenuComponent,
     HomeComponent,
     EditUserComponent
   ],
